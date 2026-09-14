@@ -1,0 +1,37 @@
+{
+  "name": "genpark-multi-tenant-agent-isolation-sandbox-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-tenant security isolation guard enforcing memory boundary compartmentalization and zero cross-tenant credential leakage.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agent-security",
+  "tags": [
+    "multi-tenant",
+    "sandbox",
+    "agent-security",
+    "data-isolation",
+    "enterprise-guard"
+  ],
+  "inputs": {
+    "tenant_id": {
+      "type": "string",
+      "default": "tenant_enterprise_4402"
+    },
+    "execution_payload": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "sandbox_status": {
+      "type": "string"
+    },
+    "tenant_scope_token": {
+      "type": "string"
+    },
+    "cross_tenant_leak_detected": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
